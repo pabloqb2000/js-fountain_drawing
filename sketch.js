@@ -23,8 +23,8 @@ function setup() {
 	angleSld = new Slider(start=0, end=PI/4, value= PI/24, 0,0, width/12, height/60, null, "Angle", false);
 	gravitySld = new Slider(start=0, end=5, value= 0.6, 0,0, width/12, height/60, null, "Gravity", false);
 	timeChangesSld = new Slider(start=0, end=1, value = 0.5, 0,0, width/12, height/60, null, "Changes in time", true, 2);
-	color1 = new ColorPicker(0,0, width/12, height/60);
-	color2 = new ColorPicker(0,0, width/12, height/60);
+	color1 = new ColorPicker(0,0, width/12, height/30, null, "Color1");
+	color2 = new ColorPicker(0,0, width/12, height/30, null, "Color2");
 
 	// Start UI
 	UI.heightMargin = height/30;
