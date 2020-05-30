@@ -8,8 +8,6 @@ let timeChangesSld;
 let color1;
 let color2;
 
-let frame = 0;
-
 function setup() {
 	createCanvas(windowWidth, windowHeight);
 	background(32);
@@ -42,7 +40,7 @@ function draw() {
 	for(let i = 0; i < nParticlesSld.value; i++) {
 		Particle.add(new Particle(createVector(random(-1,1)*width/120, 0),
 						velocitySld.value + velocitySld.value*random(-1,1)*randomnessSld.value +
-						velocitySld.value*(noise(frame/50)*2-1)*timeChangesSld.value,
+						velocitySld.value*(noise(frameCount/50)*2-1)*timeChangesSld.value,
 						random(-1,1)*angleSld.value,
 						lerpColor(color1.getColor(), color2.getColor(), random()),
 						sizeSld.value + sizeSld.value*random(-1,1)*randomnessSld.value));
@@ -70,20 +68,4 @@ function draw() {
 	line(uiWidth, 0, uiWidth, height);
 	UI.update();
 	UI.draw();
-
-	frame++;
 }
-
-function mouseDragged() {
-	UI.mouseDragged();
-}
-
-function mousePressed() {
-	UI.mouseClicked();
-}
-
-// function keyPressed() {
-//   if(keyCode === 83){
-//
-//   }
-// }
