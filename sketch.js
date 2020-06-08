@@ -9,6 +9,7 @@ let color1;
 let color2;
 
 function setup() {
+	textFont("Sarpanch");
 	createCanvas(windowWidth, windowHeight);
 	background(32);
 
